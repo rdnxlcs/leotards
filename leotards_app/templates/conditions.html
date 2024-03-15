@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="bg-img" class="bg-img h-full-not-header">
+  <div class="backdrop">
+    <div class="container pt-5 d-flex align-items-start align-items-md-center justify-content-center h-full-not-header">
+      <div class="px-4 py-5 title">
+        <div class="mx-auto text-start text-md-center">
+          <h1 class="display-1 cormorant">Мастерская костюмов Натальи Хэ</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Добро пожаловать в мастерскую уникальных костюмов для акробатики,
+              гимнастики и фигурного катания!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="full-nfooter">
+  <div>
+    <div class="bg-antiflash py-3 text-center" data-bs-toggle="collapse" data-bs-target="#collapse1">
+      <h1 class="cormorant">Обсуждение ТЗ</h1>
+    </div>
+    <div class="collapse container py-3 px-4" id="collapse1">
+      <h2 class="cormorant fw-medium">Что потребуется от Вас:</h2>
+      <ul>
+        <li>
+          <h2 class="cormorant">Техническое задание</h2>
+        </li>
+        <ul>
+          <li>Основной цвет</li>
+          <li>Дополнительные цвета</li>
+          <li>Конструкция костюма (наличие юбки, рукавов, воротника-стойки и прочее)</li>
+          <li>Узоры (графический узоры, орнаменты, природные мотивы, вензели)</li>
+          <li>Примеры понравившихся костюмов</li>
+        </ul>
+        <li>
+          <h2 class="cormorant">Музыка упражнения</h2>
+        </li>
+        <li>
+          <h2 class="cormorant">Видео упражнения (желательно)</h2>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div class="bg-antiflash py-3 text-center" data-bs-toggle="collapse" data-bs-target="#collapse2">
+      <h1 class="cormorant">Эскиз</h1>
+    </div>
+    <div class="collapse container py-3 px-4" id="collapse2">
+      <h2 class="cormorant fw-medium">Что потребуется от Вас:</h2>
+      <ul>
+        <li>Фото ребенка в тренировочном или выступалельном купальнике в полный рост (анфас, вид сзади, профиль)</li>
+      </ul>
+      <h2 class="cormorant fw-medium">Что Вы получите:</h2>
+      <ul>
+        <li>Эскиз на модели</li>
+        <li>Эскиз на фото (с возможными правками учитывая особенности фигуры)</li>
+      </ul>
+      <img src="image1.png" class="my-3">
+      <h2 class="cormorant fw-medium">Эскиз на фото</h2>
+      <p>Иногда может потребоваться доработка эскиза на фото, особенно актуально для детей в возрасте до 14 лет.</p>
+      <small class="text-secondary">Все конфединциально! Фотографии остаются у меня и не используются в публикациях
+        или где-либо еще. Затем все фото удаляются</small>
+    </div>
+  </div>
+  <div>
+    <div class="bg-antiflash py-3 text-center" data-bs-toggle="collapse" data-bs-target="#collapse3">
+      <h1 class="cormorant">Снятие мерок</h1>
+    </div>
+    <div class="collapse container py-3 px-4" id="collapse3">
+      <h2 class="cormorant fw-medium">Все костюмы шьются по индивидуальным меркам</h2>
+      <ul>
+        <li>Вы получаете подробную инструкцию по снятию мерок и видеоурок</li>
+        <li>Заполняете приложенную таблицу</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div class="bg-antiflash py-3 text-center" data-bs-toggle="collapse" data-bs-target="#collapse4">
+      <h1 class="cormorant">Материалы</h1>
+    </div>
+    <div class="collapse container py-3 px-4" id="collapse4">
+      <h2 class="cormorant fw-medium">При пошиве используются:</h2>
+      <ul>
+        <li>Только высококачественные ткани производства Италии и Кореи</li>
+        <li>Нитки высокой прочности Gutermann</li>
+        <li>Высококачественные краски по ткани</li>
+      </ul>
+      <h2 class="cormorant fw-medium">Стразы</h2>
+      <ul>
+        <li>Стразы производства Кореи и Китая</li>
+        <li>Стразы производства Европейских брендов (Preciosa, Stellux, Swarovski)</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div class="bg-antiflash py-3 text-center" data-bs-toggle="collapse" data-bs-target="#collapse5">
+      <h1 class="cormorant">Отправка заказа</h1>
+    </div>
+    <div class="collapse container py-3 px-4" id="collapse5">
+      <small class="text-secondary">По готовности костюма вы получаете фото и видеоотчет</small>
+      <h2 class="cormorant fw-medium">Для отправки возможны два варианта:</h2>
+      <ul>
+        <li>Доставка почтовыми службами. Стоимость доставки оплачивается отдельно.</li>
+        <li>Самовывоз</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

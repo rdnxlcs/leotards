@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="bg-img" class="bg-img h-full-not-header">
+  <div class="backdrop">
+    <div class="container pt-5 d-flex align-items-start align-items-md-center justify-content-center h-full-not-header">
+      <div class="px-4 py-5 title">
+        <div class="mx-auto text-start text-md-center">
+          <h1 class="display-1 cormorant">Мастерская костюмов Натальи Хэ</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Добро пожаловать в мастерскую уникальных костюмов для акробатики,
+              гимнастики и фигурного катания!</p>
+            <div class="d-grid gap-2 d-flex justify-content-start justify-content-md-center">
+              <button type="button" class="btn btn-outline-black btn-lg px-4">Связаться</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container text-center d-flex align-items-center h-full py-5 px-4" style="max-width: 1000px;">
+  <div>
+    <div>
+      <h3 class="fw-light mb-0">Che Leotards</h3>
+      <h1 class="cormorant display-2 py-5">Используем только кртуе материалыы</h1>
+      <p class="lead">Our professional clothiers come to you at a time and place of your choosing in The City of
+        London, or
+        you can visit us in our 4 Derby Terrace, Nottingham show room. We offer a full wardrobe service centred around
+        you, providing tailored clothes for every occasion – Professional, Casuals, Sporting or Wedding. Our bespoke
+        suits, shirts and casual wear are cut and sewn by artisans to the highest standards using your own pattern,
+        created by them from your measurements.</p>
+    </div>
+    <div class="row row-cols-1 pt-5 mt-5">
+      <div class="col mb-4">
+        <div class="card">
+          <img src="{% static 'images/image4.png' %}" class="card-img-top" alt="...">
+          <div class="card-body bg-antiflash">
+            <h1 class="card-title cormorant">Условия работы</h1>
+            <button class="btn btn-outline-black">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid text-center">
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="img col">
+      <img src="{% static 'images/image.png' %}">
+    </div>
+    <div class="img col">
+      <img src="{% static 'images/image1.png' %}">
+    </div>
+    <div class="img col">
+      <img src="{% static 'images/image2.png' %}">
+    </div>
+    <div class="img col">
+      <img src="{% static 'images/image3.png' %}">
+    </div>
+    <div class="img col">
+      <img src="{% static 'images/image4.png' %}">
+    </div>
+    <div class="img col">
+      <img src="{% static 'images/image5.png' %}">
+    </div>
+  </div>
+</div>
+<div class="container-fluid text-center py-4" id="hvr">
+  <a href="#" class="text-decoration-underline text-black">Больше работ</a>
+</div>
+<hr class="m-0">
+{% endblock %}

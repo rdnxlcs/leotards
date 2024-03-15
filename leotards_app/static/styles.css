@@ -1,0 +1,130 @@
+.h-full {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.h-full-not-header {
+  min-height: calc(100vh - 73px);
+  width: 100vw;
+}
+
+.bg-img {
+  background: url('images/image2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+body {
+  overflow-x: none;
+}
+
+.backdrop {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .1);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0;
+}
+
+.img {
+  padding: 0;
+}
+
+.bg-silver {
+  background: #28262C;
+}
+
+.cormorant {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+.bg-eerie {
+  background: #191716;
+}
+
+.active {
+  background: none!important;
+  border-bottom: 1px solid black;
+}
+
+.nav-link {
+  color: black!important;
+}
+
+.card {
+  border: none;
+  background: rgba(30, 32, 35, .5);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  margin-bottom: 10vh;
+}
+
+.btn-outline-black {
+  --bs-btn-color: black;
+  --bs-btn-border-color: black;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: black;
+  --bs-btn-hover-border-color: black;
+  --bs-btn-focus-shadow-rgb: 33, 37, 41;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: black;
+  --bs-btn-active-border-color: black;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: black;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: black;
+  --bs-gradient: none
+}
+
+.bg-antiflash {
+  background: #EAEDF0;
+}
+
+hr {
+  border-top: 1px solid;
+}
+
+#hvr {
+  transition: .3s;
+}
+
+#hvr:hover {
+  background: #EAEDF0;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+#header {
+  transition: .3s;
+  background: rgba(248, 249, 250, .2);
+  position: fixed;
+}
+
+.navbar-btn {
+	background: none;
+	border: 1px solid black;
+	padding: 5px 10px 5px 10px;
+	border-right: none;
+	border-left: none;
+}
+
+#full-nfooter {
+  min-height: calc(100vh - 51.2px - 59px);
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, .5)!important;
+}

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+  #app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>
+<script data-plugins="transform-modules-umd" data-presets="typescript" type="text/babel" src="./common.ts"></script>
+<script data-plugins="transform-modules-umd" data-presets="typescript" type="text/babel">
+  import { LOCATION } from './common';
+
+  window.map = null;
+
+  main();
+  async function main() {
+    // Waiting for all api elements to be loaded
+    await ymaps3.ready;
+    const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+    // Initialize the map
+    map = new YMap(
+      // Pass the link to the HTMLElement of the container
+      document.getElementById('app'),
+      // Pass the map initialization parameters
+      { location: LOCATION, showScaleInCopyrights: true },
+      // Add a map scheme layer
+      [new YMapDefaultSchemeLayer({})]
+    );
+  }
+</script>
+<div class="container-fluid p-0 ">
+  <div class="container-fluid h-full text-center align-items-center py-5 px-4 d-flex align-items-center">
+    <div class="mx-auto">
+      <h1 class="cormorant display-2 mb-3 mb-md-5">Свяжитесь с нами</h1>
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4">
+          <div class="card bg-antiflash">
+            <h1 class="display-1 mt-5"><i class="bi bi-instagram"></i></h1>
+            <div class="card-body">
+              <h1 class="card-title cormorant">Инстаграм</h1>
+              <a class="text-black">@natali_che_leotards</a>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card bg-antiflash">
+            <h1 class="display-1 mt-5"><i class="bi bi-telegram"></i></h1>
+            <div class="card-body">
+              <h1 class="card-title cormorant">Телеграм</h1>
+              <a class="text-black">@natali_che_leotards</a>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card bg-antiflash">
+            <h1 class="display-1 mt-5"><i class="bi bi-telephone-fill"></i></h1>
+            <div class="card-body">
+              <h1 class="card-title cormorant">Телефон</h1>
+              <a class="text-black">+7 (962) 250-80-25</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-0" id="full-nfooter">
+    <div class="col">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A475fbe3c6c55fedb858c7fca42417c20711215d721a3f5369a486c644fe01cef&amp;source=constructor"
+        frameborder="0"></iframe>
+    </div>
+    <div class="col bg-antiflash text-center d-flex align-items-center py-5 px-4">
+      <div class="mx-auto">
+        <h1 class="cormorant mb-4">Мастерская костюмов Натальи Хэ</h1>
+        <p>Калининград</p>
+        <p>ул. Больничная 42</p>
+        <p>Офис 205</p>
+        <hr class="mx-5 my-4">
+        <p>natali_che_leotards</p>
+        <p>natali_che_leotards</p>
+        <p>+7 (962) 250-80-25</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div id="app"></div>
+{% endblock %}
