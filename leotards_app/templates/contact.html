@@ -1,37 +1,6 @@
 {% extends 'base.html' %}
-{% load static %}
 {% block content %}
-<style>
-  #app {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-</style>
-<script data-plugins="transform-modules-umd" data-presets="typescript" type="text/babel" src="./common.ts"></script>
-<script data-plugins="transform-modules-umd" data-presets="typescript" type="text/babel">
-  import { LOCATION } from './common';
 
-  window.map = null;
-
-  main();
-  async function main() {
-    // Waiting for all api elements to be loaded
-    await ymaps3.ready;
-    const { YMap, YMapDefaultSchemeLayer } = ymaps3;
-    // Initialize the map
-    map = new YMap(
-      // Pass the link to the HTMLElement of the container
-      document.getElementById('app'),
-      // Pass the map initialization parameters
-      { location: LOCATION, showScaleInCopyrights: true },
-      // Add a map scheme layer
-      [new YMapDefaultSchemeLayer({})]
-    );
-  }
-</script>
 <div class="container-fluid p-0 ">
   <div class="container-fluid h-full text-center align-items-center py-5 px-4 d-flex align-items-center">
     <div class="mx-auto">
@@ -70,9 +39,7 @@
   </div>
   <div class="row row-cols-1 row-cols-md-2 g-0" id="full-nfooter">
     <div class="col">
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A475fbe3c6c55fedb858c7fca42417c20711215d721a3f5369a486c644fe01cef&amp;source=constructor"
-        frameborder="0"></iframe>
+      <div id="map" class="bg-danger"></div>
     </div>
     <div class="col bg-antiflash text-center d-flex align-items-center py-5 px-4">
       <div class="mx-auto">
@@ -89,5 +56,4 @@
     </div>
   </div>
 </div>
-<div id="app"></div>
 {% endblock %}
